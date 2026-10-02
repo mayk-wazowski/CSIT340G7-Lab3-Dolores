@@ -10,12 +10,12 @@ const Part = ({ name, exercises }) => {
   )
 }
 
-const Content = ({ part1, part2, part3 }) => {
+const Content = ({ parts }) => {
   return (
     <div>
-      <Part name={part1.name} exercises={part1.exercises} />
-      <Part name={part2.name} exercises={part2.exercises} />
-      <Part name={part3.name} exercises={part3.exercises} />
+      <Part name={parts[0].name} exercises={parts[0].exercises} />
+      <Part name={parts[1].name} exercises={parts[1].exercises} />
+      <Part name={parts[2].name} exercises={parts[2].exercises} />
     </div>
   )
 }
@@ -52,7 +52,7 @@ const App = () => {
   return (
     <div>
       <Header course={course} />
-      <Content part1={part1} part2={part2} part3={part3} />
+      <Content parts={parts} />
       <Total parts={parts} />
     </div>
   )
