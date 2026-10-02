@@ -10,16 +10,12 @@ const Part = ({ name, exercises }) => {
   )
 }
 
-const Content = ({ parts }) => {
+const Content = ({ part1, part2, part3 }) => {
   return (
     <div>
-      {parts.map(part => (
-        <Part
-          key={part.name}
-          name={part.name}
-          exercises={part.exercises}
-        />
-      ))}
+      <Part name={part1.name} exercises={part1.exercises} />
+      <Part name={part2.name} exercises={part2.exercises} />
+      <Part name={part3.name} exercises={part3.exercises} />
     </div>
   )
 }
@@ -56,7 +52,11 @@ const App = () => {
   return (
     <div>
       <Header course={course} />
-      <Content parts={parts} />
+      <Content
+        part1={part1}
+        part2={part2}
+        part3={part3}
+      />
       <Total parts={parts} />
     </div>
   )
