@@ -29,6 +29,14 @@ const Total = ({ parts }) => {
   )
 }
 
+const Footer = ({ name, courseCode, section }) => {
+  return (
+    <footer>
+      {name} - {courseCode} - {section}
+    </footer>
+  )
+}
+
 const App = () => {
   const course = 'Data Analytics'
 
@@ -58,6 +66,11 @@ const App = () => {
         part3={part3}
       />
       <Total parts={parts} />
+      <Footer
+        name="Mike Juneil Dolores"
+        courseCode="CSIT340"
+        section="G7"
+      />
     </div>
   )
 }
